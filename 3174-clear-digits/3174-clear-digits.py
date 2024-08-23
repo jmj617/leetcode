@@ -11,8 +11,8 @@ class Solution:
                     digit_removed = True
                     break  
 
-            if digit_removed == False:
-                break
+            # if digit_removed == False:
+            #     break
         return s
         
 
