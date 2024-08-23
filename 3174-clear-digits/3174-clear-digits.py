@@ -7,7 +7,7 @@ class Solution:
             for i in range(len(slist)):  
                 if slist[i].isdigit():
                     a = slist[i-1] + slist[i]
-                    s = s.replace(a, "", 1)  
+                    s = s.replace(a, "")  
                     digit_removed = True
                     break  
 
