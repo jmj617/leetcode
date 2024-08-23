@@ -4,7 +4,7 @@ class Solution:
             slist = list(s)
             digit_removed = False  
 
-            for i in range(1, len(slist)):  
+            for i in range(len(slist)):  
                 if slist[i].isdigit():
                     a = slist[i-1] + slist[i]
                     s = s.replace(a, "", 1)  
