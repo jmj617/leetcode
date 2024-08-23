@@ -2,17 +2,17 @@ class Solution:
     def clearDigits(self, s: str) -> str:
         while True:  
             slist = list(s)
-            digit_removed = False  
+            flag = False  
 
             for i in range(len(slist)):  
                 if slist[i].isdigit():
                     a = slist[i-1] + slist[i]
                     s = s.replace(a, "")  
-                    digit_removed = True
+                    flag = True
                     break  
 
-            # if digit_removed == False:
-            #     break
+            if flag == False:
+                break
         return s
         
 
