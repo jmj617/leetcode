@@ -16,7 +16,7 @@ class Solution:
 
         n = len(mat)
         answer = []
-        for i in range(len(mat)):
+        for i in range(n):
             answer.append(mat[i][i])
             if i != (n-1-i):
                 answer.append(mat[i][n-1-i])
