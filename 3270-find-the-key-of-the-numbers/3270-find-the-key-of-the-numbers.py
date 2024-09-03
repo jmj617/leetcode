@@ -5,6 +5,6 @@ class Solution:
         f_num3 = str(num3).zfill(4)
         answer = ''
         for chr_tuple in zip(f_num1, f_num2, f_num3):
-            answer += str(min(chr_tuple))
+            answer += min(chr_tuple)
             
         return int(answer)
