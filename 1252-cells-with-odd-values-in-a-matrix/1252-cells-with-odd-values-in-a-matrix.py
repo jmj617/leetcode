@@ -16,11 +16,10 @@ class Solution:
         for x, y in indices:
             # x=0, y=1
             for i in range(m):
-                for j in range(n):
-                    if y == j:
-                        mat[i][j] += 1
-                    if i == x:
-                        mat[i][j] += 1
+                mat[i][y] += 1
+            for j in range(n):
+                mat[x][j] += 1
+    
         for i in range(m):
             for j in range(n):
                 if mat[i][j] % 2 == 1:
