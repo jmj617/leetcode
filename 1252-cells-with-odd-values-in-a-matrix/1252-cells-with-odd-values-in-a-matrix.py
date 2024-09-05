@@ -4,7 +4,6 @@ class Solution:
         mat = np.zeros((m, n))
         answer = 0
         for x, y in indices:
-            print(x, y)
             mat[:, y] += 1
             mat[x] += 1
         for i in range(m):
