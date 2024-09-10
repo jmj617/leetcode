@@ -3,9 +3,9 @@ class Solution:
         children = [i for i in range(n)]
         a = 2 * (n - 1)
         if n <= (k % a):
-            answer = children[-2 -((k % a) - n)]
+            answer = children[-2 -(k % a - n)]
         else:
-            answer = children[k % a]
+            answer = k % a
         return answer
 
         # children = [i for i in range(n)]
