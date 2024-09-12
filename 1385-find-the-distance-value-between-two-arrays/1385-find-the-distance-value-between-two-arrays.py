@@ -3,14 +3,11 @@ class Solution:
         
         answer = 0
         for el in arr1:
-            valid = True
-        # arr2의 모든 요소와 비교
+            valid = 0
             for el2 in arr2:
-                if abs(el - el2) <= d:
-                    valid = False
-                    break
-        # 모든 조건을 만족하면 distance_value를 증가
-            if valid:
+                if abs(el - el2) > d:
+                    valid += 1
+            if valid == len(arr2):
                 answer += 1
 
         return answer
