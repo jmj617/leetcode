@@ -16,4 +16,4 @@ class Solution:
                 inc = 1
                 dec = 1
             answer = max(answer, inc, dec)
-        return answer 
+        return answer
