@@ -5,5 +5,14 @@ class Solution:
         if not even:
             return -1
         
-        counter = Counter(even)
-        return min(counter, key=lambda x: (-counter[x], x))
+        maxi = 0
+        answer = -1
+        counter = Counter(even) 
+        for n, c in counter.items():
+            if c > maxi:
+                maxi = c
+                answer = n
+            elif c == maxi:
+                answer = min(n, answer)
+        
+        return answer
