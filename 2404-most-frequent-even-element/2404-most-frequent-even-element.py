@@ -4,15 +4,16 @@ class Solution:
 
         if not even:
             return -1
+
+        max_c = 0
+        min_n = 0
         
-        maxn = 0
-        answer = -1
-        counter = Counter(even) 
+        counter = Counter(even)
+
         for n, c in counter.items():
-            if c > maxn:
-                maxn = c
-                answer = n
-            elif c == maxn:
-                answer = min(n, answer)
-        
-        return answer
+            if c > max_c:
+                max_c = c
+                min_n = n
+            elif c == max_c:
+                min_n = min(n, min_n)
+        return min_n
