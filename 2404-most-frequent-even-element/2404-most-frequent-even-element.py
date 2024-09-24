@@ -5,12 +5,12 @@ class Solution:
         if not even:
             return -1
         
-        maxi = 0
+        maxn = 0
         answer = -1
         counter = Counter(even) 
         for n, c in counter.items():
-            if c > maxi:
-                maxi = c
+            if c > maxn:
+                maxn = c
                 answer = n
             elif c == maxi:
                 answer = min(n, answer)
