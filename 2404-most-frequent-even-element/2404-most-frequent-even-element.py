@@ -12,7 +12,7 @@ class Solution:
             if c > maxn:
                 maxn = c
                 answer = n
-            elif c == maxi:
+            elif c == maxn:
                 answer = min(n, answer)
         
         return answer
