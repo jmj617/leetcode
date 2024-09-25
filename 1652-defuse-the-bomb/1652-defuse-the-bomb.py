@@ -5,7 +5,6 @@ class Solution:
             sum_num = 0
             if k > 0:
                 for j in range(1, k+1):
-                    print((i + j)%len(code))
                     sum_num += code[(i + j)%len(code)]
                 answer.append(sum_num)
             elif k < 0:
