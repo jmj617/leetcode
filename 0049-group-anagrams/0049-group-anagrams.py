@@ -1,11 +1,11 @@
 class Solution:
     def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
-        dic = defaultdict(list)
+        dic = {} 
 
         for word in strs:
-            sorted_word = ''.join(sorted(word))  # 단어를 정렬
-            dic[sorted_word].append(word)  # 정렬된 단어를 키로 사용하여 같은 단어 묶음 생성
-
-        # 정답 리스트로 변환
-        answer = list(dic.values())
-        return answer
+            word2 = ''.join(sorted(word))
+            print(word2)
+            if word2 not in dic:
+                dic[word2] = []
+            dic[word2].append(word)
+        return dic.values()
