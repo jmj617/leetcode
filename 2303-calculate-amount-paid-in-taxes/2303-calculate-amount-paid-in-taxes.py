@@ -1,15 +1,17 @@
 class Solution:
     def calculateTax(self, brackets: List[List[int]], income: int) -> float:
-        taxes = 0
-        prev_upper= 0
+        n = []
+        answer = 0
+        prev = 0
 
         for upper, percent in brackets:
-            curr = min(income, upper - prev_upper)
-            taxes += curr * (percent/100)
-            income -= curr
-            prev_upper = upper
-
-            if income == 0:
+            if upper <= income:
+                amount = upper - prev
+                answer += amount * (percent / 100)
+            else:
+                amount = income - prev
+                answer += amount * (percent / 100)
                 break
-                
-        return taxes
+            prev = upper
+
+        return answer
